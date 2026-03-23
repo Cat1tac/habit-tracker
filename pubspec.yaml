@@ -52,7 +52,7 @@ dependencies:
   shared_preferences: ^2.2.2 # Light local storage
   intl: ^0.18.1              # Date formatting
   uuid: ^4.3.3               # Unique IDs
-  flutter_local_notifications: ^16.3.0  # Reminders
+  #flutter_local_notifications: ^16.3.0  # Reminders
 
   google_fonts: ^6.1.0
   cupertino_icons: ^1.0.8
