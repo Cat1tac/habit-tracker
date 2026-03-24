@@ -2,7 +2,7 @@ class AppStrings {
   AppStrings._(); // Prevent instantiation
 
   // App-wide
-  static const String appName = 'Habit Mastery League';
+  static const String appName = 'Habit Forge';
   static const String appTagline = 'Level up your daily routine';
 
   // Splash Screen
@@ -10,7 +10,7 @@ class AppStrings {
   static const String splashInitDb = 'Preparing mission database...';
 
   // Home Screen
-  static const String homeTitle = 'Habit Mastery League';
+  static const String homeTitle = 'Habit Forge';
   static const String homeNoHabits = 'No missions yet!';
   static const String homeNoHabitsSubtitle =
       'Create your first habit mission to begin your league journey.';

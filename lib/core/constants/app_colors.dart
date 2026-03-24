@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-/// Central color palette for Habit Mastery League
+/// Central color palette for Habit Forge
 /// All colors reference this file — never use raw hex elsewhere
 class AppColors {
   AppColors._(); // Prevent instantiation

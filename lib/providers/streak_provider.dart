@@ -138,7 +138,7 @@ class StreakProvider extends ChangeNotifier {
     _newlyEarnedBadges = [...streakBadges, ...levelBadges, ...completionBadges];
   }
 
- //initiate streak for habit
+ // Initiate streak for habit
  Future<void> initStreakForHabit(String habitId) async {
    final streak = await _streakDao.createDefaultStreak(habitId);
    _streaks[habitId] = streak;

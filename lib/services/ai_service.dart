@@ -29,7 +29,7 @@ class AiService {
     required Streak streak,
   }) async {
     final prompt = '''
-You are a supportive, energetic habit coach for the "Habit Mastery League" app.
+You are a supportive, energetic habit coach for the "Habit Forge" app.
 
 The user is working on this habit:
 - Name: ${habit.name}
@@ -57,7 +57,7 @@ Be encouraging and specific to the habit context.
         .join('\n');
 
     final prompt = '''
-You are an enthusiastic habit coach for the "Habit Mastery League" app.
+You are an enthusiastic habit coach for the "Habit Forge" app.
 
 Player stats this week:
 - Active Habits:
@@ -81,7 +81,7 @@ Avoid clichés. Match the energy level to their completion rate.
     required String? userMoodNote,
   }) async {
     final prompt = '''
-You are a behavior analyst for the "Habit Mastery League" app.
+You are a behavior analyst for the "Habit Forge" app.
 
 Weekly data:
 - Habits tracked: ${habits.length}

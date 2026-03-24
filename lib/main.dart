@@ -1,7 +1,4 @@
-// lib/main.dart
-// Entry point for Habit Mastery League.
-// Initializes services before the widget tree launches.
-
+// App entry point
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'app.dart';
@@ -26,9 +23,6 @@ void main() async {
       systemNavigationBarIconBrightness: Brightness.light,
     ),
   );
-
-  // Initialize local notifications (streak reminders, badge alerts)
-  //await NotificationService().initialize();
 
   runApp(const HabitMasteryApp());
 }

@@ -1,5 +1,4 @@
-// lib/core/theme/app_theme.dart
-// Centralized ThemeData for Habit Mastery League.
+// Centralized ThemeData for Habit Forge.
 // Referenced once in app.dart — all screens inherit from here.
 
 import 'package:flutter/material.dart';
@@ -8,9 +7,7 @@ import '../constants/app_colors.dart';
 class AppTheme {
   AppTheme._(); // Prevent instantiation
 
-  // ---------------------------------------------------------------------------
   // Main dark theme — the only theme this app uses
-  // ---------------------------------------------------------------------------
   static ThemeData get dark {
     return ThemeData(
       useMaterial3: true,

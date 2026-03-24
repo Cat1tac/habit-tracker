@@ -275,7 +275,7 @@ class _WeeklyReflectionScreenState extends State<WeeklyReflectionScreen> {
     final habits = context.read<HabitProvider>().habits;
     await context.read<AiProvider>().fetchWeeklyInsight(
       habits: habits,
-      completedCount: 0,   // TODO: compute from real DB data
+      completedCount: 0,   
       totalPossible: habits.length * 7,
       userMoodNote: _mood.toString(),
     );

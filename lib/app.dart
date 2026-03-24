@@ -35,7 +35,7 @@ class HabitMasteryApp extends StatelessWidget {
         ChangeNotifierProvider(create: (_) => AiProvider()),
       ],
       child: MaterialApp(
-        title: 'Habit Mastery League',
+        title: 'Habit Forge',
         debugShowCheckedModeBanner: false,
         theme: AppTheme.dark,
         initialRoute: '/splash',

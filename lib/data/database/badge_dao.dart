@@ -2,20 +2,20 @@ import 'package:sqflite/sqflite.dart';
 import '../models/badge.dart';
 import 'database_helper.dart';
 
-/// Data Access Object for Badge CRUD operations.
+// Data Access Object for Badge CRUD operations.
 class BadgeDao {
   final DatabaseHelper _dbHelper = DatabaseHelper();
 
   // READ
 
-  /// Returns all badge definitions (earned and unearned)
+  // Returns all badge definitions (earned and unearned)
   Future<List<Badge>> getAllBadges() async {
     final db = await _dbHelper.database;
     final maps = await db.query('badges', orderBy: 'is_earned DESC');
     return maps.map((m) => Badge.fromMap(m)).toList();
   }
 
-  /// Returns only earned badges
+  // Returns only earned badges
   Future<List<Badge>> getEarnedBadges() async {
     final db = await _dbHelper.database;
     final maps = await db.query(
@@ -27,7 +27,7 @@ class BadgeDao {
     return maps.map((m) => Badge.fromMap(m)).toList();
   }
 
-  /// Returns badges that match a specific condition type
+  // Returns badges that match a specific condition type
   Future<List<Badge>> getBadgesByCondition(String conditionType) async {
     final db = await _dbHelper.database;
     final maps = await db.query(
@@ -40,8 +40,8 @@ class BadgeDao {
 
   // UPDATE — Earn a badge
 
-  /// Marks a badge as earned and sets the earned timestamp.
-  /// Returns the newly earned badge or null if it was already earned.
+  // Marks a badge as earned and sets the earned timestamp.
+  // Returns the newly earned badge or null if it was already earned.
   Future<Badge?> earnBadge(String badgeId) async {
     final db = await _dbHelper.database;
     final maps = await db.query('badges', where: 'id = ?', whereArgs: [badgeId]);
@@ -65,8 +65,8 @@ class BadgeDao {
 
   // Badge unlock checking logic
 
-  /// Checks all streak-type badges and earns any that are now unlocked.
-  /// Returns a list of newly earned badges (for unlock notifications).
+  // Checks all streak-type badges and earns any that are now unlocked.
+  // Returns a list of newly earned badges 
   Future<List<Badge>> checkStreakBadges(int currentStreak) async {
     final pendingBadges = await getBadgesByCondition('streak');
     final newlyEarned = <Badge>[];
@@ -80,7 +80,7 @@ class BadgeDao {
     return newlyEarned;
   }
 
-  /// Checks all level-type badges and earns any that are now unlocked.
+  // Checks all level-type badges and earns any that are now unlocked.
   Future<List<Badge>> checkLevelBadges(int currentLevel) async {
     final pendingBadges = await getBadgesByCondition('level');
     final newlyEarned = <Badge>[];
@@ -94,7 +94,7 @@ class BadgeDao {
     return newlyEarned;
   }
 
-  /// Checks completion count badges
+  // Checks completion count badges
   Future<List<Badge>> checkCompletionBadges(int totalCompletions) async {
     final pendingBadges = await getBadgesByCondition('completion_count');
     final newlyEarned = <Badge>[];

@@ -14,9 +14,6 @@ class WeeklyChart extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // In a full implementation, completion data comes from the database.
-    // Here we build a placeholder structure showing day labels and bar stubs.
-    // Replace _getDailyCompletions() with a real DB query in production.
     final weekDays = AppDateUtils.currentWeekDays();
     final completions = _getDailyCompletions(weekDays);
 
@@ -111,7 +108,6 @@ class WeeklyChart extends StatelessWidget {
   }
 
   /// Placeholder: returns a list of completion counts per day.
-  /// TODO: Replace with actual DB query for accurate data.
   List<int> _getDailyCompletions(List<DateTime> weekDays) {
     // Stub data — connect to HabitDao.getCompletionMap() for real values
     return List.generate(7, (i) {

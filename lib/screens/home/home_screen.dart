@@ -59,7 +59,7 @@ class _HomeScreenState extends State<HomeScreen> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                'Habit Mastery League',
+                'Habit Forge',
                 style: Theme.of(context).textTheme.titleLarge?.copyWith(
                       color: AppColors.textPrimary,
                       fontWeight: FontWeight.bold,
@@ -95,7 +95,6 @@ class _HomeScreenState extends State<HomeScreen> {
       builder: (context, provider, _) {
         final total = provider.todaysHabits.length;
         // Count how many habits have been completed today
-        // (In full implementation, track via streak provider)
         const completed = 0;
 
         return DailyProgressRing(

@@ -96,7 +96,7 @@ class _SplashScreenState extends State<SplashScreen>
 
                 // App title
                 Text(
-                  'Habit Mastery',
+                  'Habit Forge',
                   style: AppTextStyles.displayLarge,
                 ),
                 Text(

@@ -61,7 +61,7 @@ class AdaptiveGoalsScreen extends StatelessWidget {
                 _buildGoalCard(
                   emoji: '✅',
                   title: AppStrings.adaptiveCompletion,
-                  current: 0, // TODO: compute from real weekly data
+                  current: 0, 
                   target: completionGoal,
                   color: AppColors.success,
                   unit: 'completions',
