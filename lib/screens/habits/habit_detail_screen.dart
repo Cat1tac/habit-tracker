@@ -206,7 +206,7 @@ class _HabitDetailScreenState extends State<HabitDetailScreen> {
       child: Row(
         children: [
           const Text('🛡️', style: TextStyle(fontSize: 24)),
-          const SizedBox(width: 12),
+          const SizedBox(width: 10),
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -227,7 +227,7 @@ class _HabitDetailScreenState extends State<HabitDetailScreen> {
                 child: Icon(
                   Icons.shield,
                   color: active ? AppColors.primary : AppColors.textMuted,
-                  size: 24,
+                  size: 10,
                 ),
               );
             }),
